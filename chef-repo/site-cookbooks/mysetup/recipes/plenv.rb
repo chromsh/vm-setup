@@ -18,8 +18,6 @@ bash "install-plenv" do
 			anyenv install plenv
 		fi
 	EOS
-
-	not_if ""
 end
 
 bash "install-perl" do 

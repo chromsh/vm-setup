@@ -20,9 +20,11 @@ Vagrant.configure(2) do |config|
 		"yum-remi",
 		"mysetup",
 		"mysetup::anyenv",
+		"mysetup::nginx_prepare",
+		"nginx::source",
+
 		"mysetup::plenv",
 		"selinux::disabled",
-		"nginx::source",
 	]
 	chef.json	= {
 		selinux: {
@@ -75,6 +77,7 @@ Vagrant.configure(2) do |config|
 				"--with-http_v2_module",
 			],
 			source: {
+				sbin_path: "/usr/sbin/nginx",
 				checksum: "fb14d76844cab0a5a0880768be28965e74f9956790f618c454ef6098e26631d9"
 			}
 		}

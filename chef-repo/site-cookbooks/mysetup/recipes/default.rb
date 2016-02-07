@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%W{libxml2-devel libxslt-devel gd-devel vim}.each do |pkg|
+%W{libxml2-devel libxslt-devel gd-devel vim telnet mailx}.each do |pkg|
 	package "#{pkg}" do
 		action :install
 	end
@@ -16,6 +16,11 @@ end
 yum_package "git" do
 	action :install
 	options "--enablerepo=rpmforge-extras"
+end
+
+yum_package "lv" do
+	action :install
+	options "--enablerepo=rpmforge"
 end
 
 link '/etc/localtime' do
