@@ -1,3 +1,4 @@
 chef-repo/cookbooks
 chef-repo/Berksfile.lock
 *.swp
+.vagrant
