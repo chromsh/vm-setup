@@ -1,0 +1,8 @@
+source "https://supermarket.chef.io"
+
+cookbook "mysetup", path:"site-cookbooks/mysetup"
+cookbook "yum-epel"
+cookbook "yum-remi"
+cookbook "yum-repoforge"
+cookbook "selinux"
+cookbook "nginx"
