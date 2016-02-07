@@ -11,6 +11,7 @@
     berks vendor cookbooks/
     
     # and then
+    cd ../
     vagrant up
 ```
 
